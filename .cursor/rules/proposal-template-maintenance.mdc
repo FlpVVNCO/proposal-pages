@@ -1,0 +1,19 @@
+---
+description: Keep the Qubo proposal template stable while adding client proposals
+alwaysApply: true
+---
+
+# Proposal Template Maintenance
+
+This repo separates template code from client proposal content.
+
+- Treat `app/`, `components/`, `lib/types.ts`, and global styles as the reusable template. Do not change them when the user only asks to add a new client proposal.
+- New client proposals should normally be added as `lib/proposals/[client-project-slug].config.ts`.
+- Register every new proposal in `lib/proposals/index.ts`.
+- Keep proposal content shaped exactly as `ProposalConfig`.
+- Preserve Qubo brand casing as `Qubo` in visible text.
+- Do not invent prices, timelines, legal claims, or guarantees. If missing, ask or mark as pending for validation.
+- Keep routes private-by-link unless the user asks for authentication. Prefer professional, non-guessable slugs for client links.
+- After adding or editing a proposal, run lint or at least check TypeScript/linter diagnostics for touched files.
+
+When uncertain, protect the template and only modify proposal data.

@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { ArrowLeft, FileX } from "lucide-react";
+import { FileX } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -12,16 +11,15 @@ export default function NotFound() {
           Propuesta no encontrada
         </h1>
         <p className="text-slate-500 text-sm mb-8">
-          Esta propuesta no existe o el enlace no es válido. Verificá el slug e
-          intentá nuevamente.
+          Esta propuesta no existe o el enlace no es válido. Verifica el link
+          recibido e intenta nuevamente.
         </p>
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 bg-[#FFE566] hover:bg-[#FFD700] text-[#3E157B] font-bold px-5 py-2.5 rounded-lg text-sm transition-colors"
-        >
-          <ArrowLeft size={15} />
-          Ver todas las propuestas
-        </Link>
+        <p className="text-[#3E157B]/40 text-xs">
+          Si el problema continúa, solicita a Qubo que revise el enlace.
+        </p>
+        <p className="text-[#3E157B]/30 text-xs mt-2">
+          Equipo interno: accede al panel en <code>/admin</code>.
+        </p>
       </div>
     </main>
   );
