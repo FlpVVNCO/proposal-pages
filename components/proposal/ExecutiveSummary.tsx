@@ -43,7 +43,7 @@ const blocks = [
 
 export function ExecutiveSummary({ summary }: ExecutiveSummaryProps) {
   return (
-    <section className="bg-[#F5F0FF] border-b border-[#EDE5FF] py-20 px-6">
+    <section className="bg-[#1C0942] border-b border-[#2E1266] py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -52,10 +52,10 @@ export function ExecutiveSummary({ summary }: ExecutiveSummaryProps) {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#3E157B]/50 mb-2">
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#C9ADFF]/50 mb-2">
             Resumen Ejecutivo
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
             El panorama completo en tres puntos
           </h2>
         </motion.div>
@@ -78,7 +78,7 @@ export function ExecutiveSummary({ summary }: ExecutiveSummaryProps) {
                 </div>
                 <p
                   className={`text-xs font-semibold tracking-widest uppercase mb-2 ${
-                    key === "solution" ? "text-[#C9ADFF]" : "text-[#3E157B]/60"
+                    key === "solution" ? "text-[#C9ADFF]" : "text-[#3E157B]/70"
                   }`}
                 >
                   {label}

@@ -10,8 +10,8 @@ export default function HomePage() {
       <div className="max-w-lg w-full">
         {/* Header */}
         <div className="flex items-center gap-3 mb-10">
-          <div className="w-9 h-9 bg-[#3E157B] rounded-lg flex items-center justify-center">
-            <Lock size={15} className="text-white" />
+          <div className="w-9 h-9 bg-[#FFE566] rounded-lg flex items-center justify-center">
+            <Lock size={15} className="text-[#3E157B]" />
           </div>
           <div>
             <p className="text-xs font-semibold tracking-widest uppercase text-[#3E157B]/50">

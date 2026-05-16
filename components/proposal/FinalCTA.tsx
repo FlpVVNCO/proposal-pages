@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, CheckCircle } from "lucide-react";
 import { ProposalCTA } from "@/lib/types";
+import { QuboLogo } from "@/components/brand/QuboLogo";
 
 interface FinalCTAProps {
   cta: ProposalCTA;
@@ -11,7 +12,7 @@ interface FinalCTAProps {
 
 export function FinalCTA({ cta, client }: FinalCTAProps) {
   return (
-    <section className="bg-[#1C0942] py-24 px-6">
+    <section className="bg-[#3E157B] py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -36,7 +37,7 @@ export function FinalCTA({ cta, client }: FinalCTAProps) {
               {cta.primaryButton}
               <ArrowRight size={15} />
             </button>
-            <button className="inline-flex items-center gap-2 bg-[#2A1060] hover:bg-[#3D2080] text-white font-semibold px-7 py-3.5 rounded-lg border border-[#3D2080] transition-colors">
+            <button className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-7 py-3.5 rounded-lg border border-white/20 transition-colors">
               <Calendar size={17} />
               {cta.secondaryButton}
             </button>
@@ -50,13 +51,16 @@ export function FinalCTA({ cta, client }: FinalCTAProps) {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="mt-16 pt-8 border-t border-[#2E1266] text-center"
+        className="mt-16 pt-8 border-t border-[#5B2FA0] text-center"
       >
-        <p className="text-[#C9ADFF]/30 text-xs">
-          Esta es una propuesta privada y confidencial. Preparada exclusivamente
-          para{" "}
-          <span className="text-[#C9ADFF]/60 font-medium">{client}</span>.
-        </p>
+        <div className="flex flex-col items-center gap-4">
+          <QuboLogo variant="full" theme="dark" className="scale-90" />
+          <p className="text-white/30 text-xs">
+            Esta es una propuesta privada y confidencial. Preparada exclusivamente
+            para{" "}
+            <span className="text-white/60 font-medium">{client}</span>.
+          </p>
+        </div>
       </motion.div>
     </section>
   );

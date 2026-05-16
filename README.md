@@ -129,6 +129,12 @@ npm run dev
 
 Abrí [http://localhost:3000](http://localhost:3000) para ver el índice de propuestas.
 
+## Assets de marca
+
+- `public/brand/qubo-icon-purple.png`: icono morado para fondos claros (base `#3E157B`).
+- `public/brand/qubo-icon-white.png`: icono blanco para fondos oscuros.
+- El componente `components/brand/QuboLogo.tsx` usa estos assets automáticamente con `theme="light"` (morado) y `theme="dark"` (blanco).
+
 ## Deploy en Vercel
 
 ```bash

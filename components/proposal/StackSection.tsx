@@ -10,7 +10,7 @@ interface StackSectionProps {
 
 export function StackSection({ stack, methodology }: StackSectionProps) {
   return (
-    <section className="bg-[#1C0942] border-b border-[#2E1266] py-20 px-6">
+    <section className="bg-white border-b border-[#EDE5FF] py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -19,32 +19,32 @@ export function StackSection({ stack, methodology }: StackSectionProps) {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#C9ADFF]/50 mb-2">
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#3E157B]/40 mb-2">
             Cómo trabajamos
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
             Stack técnico y metodología
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {/* Stack */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
-            className="bg-[#2A1060] border border-[#3D2080] rounded-xl p-7"
+            className="bg-[#F5F0FF] border border-[#E4D4FF] rounded-xl p-7"
           >
             <div className="flex items-center gap-2 mb-5">
-              <Code2 size={18} className="text-[#FFE566]" />
-              <h3 className="font-semibold text-white">Stack tecnológico</h3>
+              <Code2 size={18} className="text-[#3E157B]" />
+              <h3 className="font-semibold text-slate-900">Stack tecnológico</h3>
             </div>
             <div className="flex flex-wrap gap-2">
               {stack.map((tech, i) => (
                 <span
                   key={i}
-                  className="inline-block bg-[#3E157B]/60 border border-[#5B2FA0]/50 text-[#C9ADFF] text-sm font-medium px-3 py-1.5 rounded-lg"
+                  className="inline-block bg-white border border-[#E4D4FF] text-[#3E157B] text-sm font-medium px-3 py-1.5 rounded-lg shadow-sm"
                 >
                   {tech}
                 </span>
@@ -58,7 +58,7 @@ export function StackSection({ stack, methodology }: StackSectionProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45, delay: 0.1 }}
-            className="bg-[#2A1060] border border-[#3D2080] rounded-xl p-7"
+            className="bg-[#3E157B] border border-[#3E157B] rounded-xl p-7"
           >
             <div className="flex items-center gap-2 mb-5">
               <CheckCircle2 size={18} className="text-[#FFE566]" />

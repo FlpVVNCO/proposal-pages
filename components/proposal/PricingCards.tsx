@@ -12,7 +12,7 @@ interface PricingCardsProps {
 
 export function PricingCards({ plans, cta }: PricingCardsProps) {
   return (
-    <section className="bg-white border-b border-[#EDE5FF] py-20 px-6">
+    <section className="bg-[#140731] border-b border-[#2E1266] py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -21,13 +21,13 @@ export function PricingCards({ plans, cta }: PricingCardsProps) {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#3E157B]/50 mb-2">
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#C9ADFF]/50 mb-2">
             Inversión
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
             Planes y precios
           </h2>
-          <p className="text-slate-500 mt-3 max-w-xl">
+          <p className="text-[#C9ADFF] mt-3 max-w-xl">
             Elegí el plan que mejor se ajusta al alcance inicial de tu proyecto.
           </p>
         </motion.div>
@@ -52,8 +52,8 @@ export function PricingCards({ plans, cta }: PricingCardsProps) {
               className={clsx(
                 "relative rounded-2xl border p-7 flex flex-col",
                 plan.featured
-                  ? "bg-[#3E157B] border-[#3E157B] text-white shadow-xl shadow-[#3E157B]/20"
-                  : "bg-white border-[#E4D4FF] text-slate-900"
+                  ? "bg-[#3E157B] border-[#5B2FA0] text-white shadow-xl shadow-[#000000]/30"
+                  : "bg-[#2A1060] border-[#3D2080] text-white"
               )}
             >
               {plan.featured && (
@@ -69,7 +69,7 @@ export function PricingCards({ plans, cta }: PricingCardsProps) {
                 <p
                   className={clsx(
                     "text-xs font-semibold tracking-widest uppercase mb-1",
-                    plan.featured ? "text-[#C9ADFF]" : "text-[#3E157B]/50"
+                    plan.featured ? "text-[#C9ADFF]" : "text-[#C9ADFF]/70"
                   )}
                 >
                   {plan.name}
@@ -77,7 +77,7 @@ export function PricingCards({ plans, cta }: PricingCardsProps) {
                 <p
                   className={clsx(
                     "text-4xl font-bold tracking-tight",
-                    plan.featured ? "text-white" : "text-slate-900"
+                    "text-white"
                   )}
                 >
                   {plan.price}
@@ -87,7 +87,7 @@ export function PricingCards({ plans, cta }: PricingCardsProps) {
               <p
                 className={clsx(
                   "text-sm leading-relaxed flex-1 mb-6",
-                  plan.featured ? "text-[#C9ADFF]" : "text-slate-500"
+                  plan.featured ? "text-[#C9ADFF]" : "text-[#C9ADFF]"
                 )}
               >
                 {plan.description}
@@ -98,7 +98,7 @@ export function PricingCards({ plans, cta }: PricingCardsProps) {
                   "w-full py-2.5 rounded-lg font-semibold text-sm transition-colors",
                   plan.featured
                     ? "bg-[#FFE566] text-[#3E157B] hover:bg-[#FFD700]"
-                    : "bg-[#3E157B] text-white hover:bg-[#2D0F5C]"
+                    : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
                 )}
               >
                 {cta.primaryButton}
