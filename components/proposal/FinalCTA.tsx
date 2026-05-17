@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, CheckCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { ProposalCTA } from "@/lib/types";
 import { QuboLogo } from "@/components/brand/QuboLogo";
 
@@ -31,15 +31,10 @@ export function FinalCTA({ cta, client }: FinalCTAProps) {
             {cta.description}
           </p>
 
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex justify-center">
             <button className="inline-flex items-center gap-2 bg-[#FFE566] hover:bg-[#FFD700] text-[#3E157B] font-bold px-7 py-3.5 rounded-lg transition-colors">
-              <CheckCircle size={17} />
-              {cta.primaryButton}
+              Contactar a Qubo
               <ArrowRight size={15} />
-            </button>
-            <button className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-7 py-3.5 rounded-lg border border-white/20 transition-colors">
-              <Calendar size={17} />
-              {cta.secondaryButton}
             </button>
           </div>
         </motion.div>

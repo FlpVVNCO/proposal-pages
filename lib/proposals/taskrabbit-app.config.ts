@@ -144,20 +144,20 @@ const taskrabbitApp: ProposalConfig = {
   pricing: [
     {
       name: "MVP Sólido",
-      price: "USD 10,000 – 14,000",
+      price: "USD 10.000",
       description:
         "Versión inicial funcional con solicitud de servicios, matching, cotizaciones, chat, agenda, pagos, evidencia, reviews y panel administrativo básico.",
       featured: true,
     },
     {
       name: "Versión Extendida",
-      price: "USD 15,000 – 25,000",
+      price: "USD 15.000",
       description:
         "Mayor robustez técnica, validaciones avanzadas, notificaciones más completas, panel administrativo ampliado y mayor preparación para escalar.",
     },
     {
       name: "Enterprise",
-      price: "A consultar",
+      price: "USD 20.000",
       description:
         "AWS completo, arquitectura serverless, validación avanzada de especialistas, analítica, flujos de disputas, facturación y automatizaciones adicionales.",
     },

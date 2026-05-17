@@ -7,10 +7,9 @@ import clsx from "clsx";
 
 interface PricingCardsProps {
   plans: PricingPlan[];
-  cta: { primaryButton: string };
 }
 
-export function PricingCards({ plans, cta }: PricingCardsProps) {
+export function PricingCards({ plans }: PricingCardsProps) {
   return (
     <section className="bg-[#140731] border-b border-[#2E1266] py-20 px-6">
       <div className="max-w-5xl mx-auto">
@@ -93,16 +92,6 @@ export function PricingCards({ plans, cta }: PricingCardsProps) {
                 {plan.description}
               </p>
 
-              <button
-                className={clsx(
-                  "w-full py-2.5 rounded-lg font-semibold text-sm transition-colors",
-                  plan.featured
-                    ? "bg-[#FFE566] text-[#3E157B] hover:bg-[#FFD700]"
-                    : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
-                )}
-              >
-                {cta.primaryButton}
-              </button>
             </motion.div>
           ))}
         </div>

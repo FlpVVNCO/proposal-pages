@@ -8,6 +8,8 @@ alwaysApply: true
 This repo separates template code from client proposal content.
 
 - Treat `app/`, `components/`, `lib/types.ts`, and global styles as the reusable template. Do not change them when the user only asks to add a new client proposal.
+- Never modify the reusable template (`app/`, `components/`, `lib/types.ts`, styles, shared branding, layout, routing behavior) unless the user explicitly requests a template change in that specific prompt.
+- If a request can be solved by editing proposal data only, prefer changes in `lib/proposals/*.config.ts` and avoid template edits.
 - New client proposals should normally be added as `lib/proposals/[client-project-slug].config.ts`.
 - Register every new proposal in `lib/proposals/index.ts`.
 - Keep proposal content shaped exactly as `ProposalConfig`.
@@ -16,4 +18,4 @@ This repo separates template code from client proposal content.
 - Keep routes private-by-link unless the user asks for authentication. Prefer professional, non-guessable slugs for client links.
 - After adding or editing a proposal, run lint or at least check TypeScript/linter diagnostics for touched files.
 
-When uncertain, protect the template and only modify proposal data.
+When uncertain, protect the template, ask for confirmation, and only modify proposal data.

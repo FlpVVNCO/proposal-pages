@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, CheckCircle, Play } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import { ProposalConfig } from "@/lib/types";
 import { QuboLogo } from "@/components/brand/QuboLogo";
 
@@ -71,21 +71,13 @@ export function ProposalHero({ proposal }: ProposalHeroProps) {
           negocio.
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* Action */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.22 }}
-          className="flex flex-wrap gap-3"
+          className="flex"
         >
-          <button className="inline-flex items-center gap-2 bg-[#FFE566] hover:bg-[#FFD700] text-[#3E157B] font-bold px-6 py-3 rounded-lg transition-colors text-sm shadow-md shadow-[#000000]/20">
-            <CheckCircle size={16} />
-            {proposal.cta.primaryButton}
-          </button>
-          <button className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors text-sm backdrop-blur-sm">
-            <Calendar size={16} />
-            {proposal.cta.secondaryButton}
-          </button>
           <button className="inline-flex items-center gap-2 text-[#C9ADFF] hover:text-white font-medium px-4 py-3 transition-colors text-sm">
             <Play size={15} />
             Ver demo
