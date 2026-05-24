@@ -126,7 +126,7 @@ const agronomerAsesorSaas: ProposalConfig = {
       name: "MVP Recomendado",
       price: "USD 18,000",
       description:
-        "Incluye plataforma web, app móvil asesor, app móvil productor, offline básico en productor, integración con APIs del cliente, adaptación del HTML existente, roles simples, notificaciones según servicios disponibles, QA funcional y entrega técnica.",
+        "Incluye plataforma web, app móvil asesor, app móvil productor, offline básico en productor, integración con APIs del cliente, adaptación del HTML existente, roles simples, notificaciones según servicios disponibles, QA funcional y entrega técnica.\n\n**Mantención mensual opcional:** USD 1,200 / mes, con corrección de bugs menores, ajustes funcionales acotados, soporte técnico, revisión de incidencias, pequeñas mejoras y acompañamiento durante la operación inicial.",
       featured: true,
     },
     {

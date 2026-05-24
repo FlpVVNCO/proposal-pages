@@ -9,6 +9,24 @@ interface PricingCardsProps {
   plans: PricingPlan[];
 }
 
+function renderBoldText(text: string) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, index) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={index}>{part.slice(2, -2)}</strong>;
+    }
+
+    return part;
+  });
+}
+
+function renderDescription(text: string) {
+  return text.split("\n\n").map((paragraph, index) => (
+    <p key={index} className={index > 0 ? "mt-4" : undefined}>
+      {renderBoldText(paragraph)}
+    </p>
+  ));
+}
+
 export function PricingCards({ plans }: PricingCardsProps) {
   return (
     <section className="bg-[#140731] border-b border-[#2E1266] py-20 px-6">
@@ -83,14 +101,14 @@ export function PricingCards({ plans }: PricingCardsProps) {
                 </p>
               </div>
 
-              <p
+              <div
                 className={clsx(
                   "text-sm leading-relaxed flex-1 mb-6",
                   plan.featured ? "text-[#C9ADFF]" : "text-[#C9ADFF]"
                 )}
               >
-                {plan.description}
-              </p>
+                {renderDescription(plan.description)}
+              </div>
 
             </motion.div>
           ))}
