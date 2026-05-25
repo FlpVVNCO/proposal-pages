@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { ProposalCTA } from "@/lib/types";
 import { QuboLogo } from "@/components/brand/QuboLogo";
 
@@ -31,12 +30,15 @@ export function FinalCTA({ cta, client }: FinalCTAProps) {
             {cta.description}
           </p>
 
-          <div className="flex justify-center">
-            <button className="inline-flex items-center gap-2 bg-[#FFE566] hover:bg-[#FFD700] text-[#3E157B] font-bold px-7 py-3.5 rounded-lg transition-colors">
-              Contactar a Qubo
-              <ArrowRight size={15} />
-            </button>
-          </div>
+          {/*
+            CTA principal (temporalmente desactivada):
+            <div className="flex justify-center">
+              <button className="inline-flex items-center gap-2 bg-[#FFE566] hover:bg-[#FFD700] text-[#3E157B] font-bold px-7 py-3.5 rounded-lg transition-colors">
+                Contactar a Qubo
+                <ArrowRight size={15} />
+              </button>
+            </div>
+          */}
         </motion.div>
       </div>
 

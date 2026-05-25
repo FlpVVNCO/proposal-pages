@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
 import { ProposalConfig } from "@/lib/types";
 import { QuboLogo } from "@/components/brand/QuboLogo";
 
@@ -71,19 +70,21 @@ export function ProposalHero({ proposal }: ProposalHeroProps) {
           negocio.
         </motion.p>
 
-        {/* Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.22 }}
-          className="flex"
-        >
-          <button className="inline-flex items-center gap-2 text-[#C9ADFF] hover:text-white font-medium px-4 py-3 transition-colors text-sm">
-            <Play size={15} />
-            Ver demo
-            <ArrowRight size={14} />
-          </button>
-        </motion.div>
+        {/*
+          Action (temporalmente desactivada):
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.22 }}
+            className="flex"
+          >
+            <button className="inline-flex items-center gap-2 text-[#C9ADFF] hover:text-white font-medium px-4 py-3 transition-colors text-sm">
+              <Play size={15} />
+              Ver demo
+              <ArrowRight size={14} />
+            </button>
+          </motion.div>
+        */}
       </div>
     </section>
   );

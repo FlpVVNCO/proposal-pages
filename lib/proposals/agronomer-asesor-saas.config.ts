@@ -2,7 +2,7 @@ import { ProposalConfig } from "@/lib/types";
 
 const agronomerAsesorSaas: ProposalConfig = {
   slug: "agronomer-asesor-saas",
-  client: "Cliente agronomo",
+  client: "Andres Aliaga/Agronomer",
   title: "Plataforma Web y Apps Móviles",
   mainProblem:
     "cliente agronomo hoy existe como un módulo básico dentro de la plataforma principal de cliente agronomo y necesita convertirse en un producto SaaS independiente para clientes B2B del mundo agro.",

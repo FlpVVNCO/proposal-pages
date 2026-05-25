@@ -2,6 +2,7 @@ import { ProposalConfig } from "@/lib/types";
 import taskrabbitApp from "./taskrabbit-app.config";
 import isoDrive from "./iso-drive.config";
 import agronomerAsesorSaas from "./agronomer-asesor-saas.config";
+import carlosAlvaradoSaludDomicilio from "./carlos-alvarado-salud-domicilio.config";
 
 /**
  * Registry of all available proposals.
@@ -13,6 +14,7 @@ const proposals: ProposalConfig[] = [
   taskrabbitApp,
   isoDrive,
   agronomerAsesorSaas,
+  carlosAlvaradoSaludDomicilio,
 ];
 
 export function getProposalBySlug(slug: string): ProposalConfig | undefined {
