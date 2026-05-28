@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Proposal Pages",
   description: "Propuestas privadas de desarrollo de software.",
+  icons: {
+    icon: "/brand/qubo-icon-purple.png",
+    shortcut: "/brand/qubo-icon-purple.png",
+    apple: "/brand/qubo-icon-purple.png",
+  },
 };
 
 export default function RootLayout({

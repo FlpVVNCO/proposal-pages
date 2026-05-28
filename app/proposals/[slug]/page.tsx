@@ -61,8 +61,8 @@ export default async function ProposalPage({ params }: PageProps) {
       <SolutionModules modules={proposal.modules} />
       <Timeline items={proposal.timeline} />
       <StackSection stack={proposal.stack} methodology={proposal.methodology} />
-      <PricingCards plans={proposal.pricing} />
-      <IncludesChecklist items={proposal.includes} />
+      <PricingCards plans={proposal.pricing} proposalSlug={proposal.slug} />
+      <IncludesChecklist items={proposal.includes} proposalSlug={proposal.slug} />
       <ExclusionsChecklist items={proposal.notIncluded} />
       <FinalCTA cta={proposal.cta} client={proposal.client} />
     </main>

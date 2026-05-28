@@ -109,12 +109,18 @@ const carlosAlvaradoSaludDomicilio: ProposalConfig = {
   ],
   pricing: [
     {
-      name: "MVP Marketplace Salud a Domicilio",
-      price: "TBD",
+      name: "Opción 1: MVP Transaccional (Validación de Mercado)",
+      price: "$14.500.000 CLP",
       description:
-        "Precio pendiente de validación interna. Alcance base: app móvil iOS/Android, panel web, geolocalización, agendamiento, pagos, reputación y publicación inicial.",
-      featured: true,
+        "**Tiempo estimado: 8 semanas**\n\nEnfoque: construir un producto robusto, seguro y funcional para salir al mercado rapido, validar traccion con los primeros profesionales y generar flujo de caja mediante pagos particulares.\n\nAlcance: app movil unificada (pacientes y profesionales), panel de administracion web, agendamiento y match por radio geografico, pagos en custodia con MercadoPago Split, sistema de reputacion y notificaciones transaccionales basicas.\n\nSoporte: 1 mes de garantia tecnica post-lanzamiento para correccion de bugs criticos.\n\nEstructura de pago: 40% al inicio / 30% al entregar perfiles y agendamientos (mitad del proyecto) / 30% al entregar y publicar en tiendas",
     },
+    {
+      name: "Opción 2: MVP + Partnership Tecnológico (Visión a Largo Plazo)",
+      price: "$12.500.000 CLP (setup) + $1.200.000 CLP/mes (retainer 6 meses)",
+      description:
+        "**Tiempo estimado: 8 semanas para MVP + desarrollo continuo**\n\nEnfoque: reducir el costo inicial del MVP a cambio de compromiso mensual, actuando como equipo tecnologico dedicado para escalar hacia integraciones institucionales cuando existan acuerdos y accesos tecnicos formales.\n\nAlcance inicial (setup): entrega completa de todo lo descrito en la opcion 1.\n\nAlcance continuo (retainer mensual, inicia en el mes 3): soporte y mantencion prioritaria, actualizaciones de librerias, mejoras de producto basadas en feedback real y avance de fase 2 para integraciones legales conforme se habiliten documentaciones tecnicas (I-Med, MINSAL, Registro Civil).\n\nEstructura de pago: 50% al inicio y 50% al entregar; retainer mensual desde salida a produccion(desde el mes 3).",
+        featured: true
+      },
   ],
   includes: [
     "Diseño UX/UI del MVP",
@@ -142,7 +148,7 @@ const carlosAlvaradoSaludDomicilio: ProposalConfig = {
   cta: {
     title: "Siguiente paso",
     description:
-      "Revisemos la propuesta técnica y comercial el jueves a las 12:30 hrs para cerrar alcance, validar precio y confirmar el plan de inicio proyectado en 1 a 2 meses.",
+      "Revisemos la propuesta técnica y comercial el jueves a las 12:30 hrs para confirmar modalidad de pago y plan de inicio proyectado en 1 a 2 meses.",
     primaryButton: "Revisar propuesta",
     secondaryButton: "Agendar revisión",
   },

@@ -7,6 +7,27 @@ import clsx from "clsx";
 
 interface PricingCardsProps {
   plans: PricingPlan[];
+  proposalSlug?: string;
+}
+
+function splitPaymentStructure(description: string): {
+  descriptionText: string;
+  paymentStructure: string | null;
+} {
+  const marker = /\n\nEstructura de pago:\s*/i;
+  const parts = description.split(marker);
+
+  if (parts.length < 2) {
+    return { descriptionText: description, paymentStructure: null };
+  }
+
+  const [descriptionText, ...rest] = parts;
+  const paymentStructure = rest.join(" ").trim();
+
+  return {
+    descriptionText: descriptionText.trim(),
+    paymentStructure: paymentStructure || null,
+  };
 }
 
 function renderBoldText(text: string) {
@@ -27,7 +48,9 @@ function renderDescription(text: string) {
   ));
 }
 
-export function PricingCards({ plans }: PricingCardsProps) {
+export function PricingCards({ plans, proposalSlug }: PricingCardsProps) {
+  const showPaymentCard = proposalSlug === "carlos-alvarado-salud-domicilio";
+
   return (
     <section className="bg-[#140731] border-b border-[#2E1266] py-20 px-6">
       <div className="max-w-5xl mx-auto">
@@ -59,8 +82,11 @@ export function PricingCards({ plans }: PricingCardsProps) {
               : "sm:grid-cols-2"
           )}
         >
-          {plans.map((plan, i) => (
-            <motion.div
+          {plans.map((plan, i) => {
+            const { descriptionText, paymentStructure } = splitPaymentStructure(plan.description);
+
+            return (
+              <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -107,11 +133,20 @@ export function PricingCards({ plans }: PricingCardsProps) {
                   plan.featured ? "text-[#C9ADFF]" : "text-[#C9ADFF]"
                 )}
               >
-                {renderDescription(plan.description)}
+                {renderDescription(descriptionText)}
               </div>
 
+              {showPaymentCard && paymentStructure && (
+                <div className="mt-auto rounded-xl border border-[#5B2FA0]/60 bg-[#1D0B47] p-4">
+                  <p className="text-[11px] font-semibold tracking-widest uppercase text-[#C9ADFF]/70 mb-2">
+                    Estructura de pago
+                  </p>
+                  <p className="text-sm leading-relaxed text-[#E8DBFF]">{paymentStructure}</p>
+                </div>
+              )}
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
