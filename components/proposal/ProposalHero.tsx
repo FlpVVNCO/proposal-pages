@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight, Play } from "lucide-react";
 import { ProposalConfig } from "@/lib/types";
 import { QuboLogo } from "@/components/brand/QuboLogo";
 
@@ -9,6 +10,11 @@ interface ProposalHeroProps {
 }
 
 export function ProposalHero({ proposal }: ProposalHeroProps) {
+  const demoHref =
+    proposal.slug === "carlos-alvarado-salud-domicilio"
+      ? "https://medical-uber-app-mock.vercel.app/"
+      : null;
+
   return (
     <section className="relative overflow-hidden bg-[#1C0942] border-b border-[#2E1266]">
       {/* Soft radial glow top-left */}
@@ -70,21 +76,25 @@ export function ProposalHero({ proposal }: ProposalHeroProps) {
           negocio.
         </motion.p>
 
-        {/*
-          Action (temporalmente desactivada):
+        {demoHref && (
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.22 }}
             className="flex"
           >
-            <button className="inline-flex items-center gap-2 text-[#C9ADFF] hover:text-white font-medium px-4 py-3 transition-colors text-sm">
+            <a
+              href={demoHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-[#C9ADFF] hover:text-white font-medium px-4 py-3 transition-colors text-sm"
+            >
               <Play size={15} />
               Ver demo
               <ArrowRight size={14} />
-            </button>
+            </a>
           </motion.div>
-        */}
+        )}
       </div>
     </section>
   );
