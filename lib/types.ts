@@ -20,6 +20,7 @@ export interface PricingPlan {
   name: string;
   price: string;
   description: string;
+  items?: string[];
   featured?: boolean;
 }
 

@@ -49,7 +49,10 @@ function renderDescription(text: string) {
 }
 
 export function PricingCards({ plans, proposalSlug }: PricingCardsProps) {
-  const showPaymentCard = proposalSlug === "carlos-alvarado-salud-domicilio";
+  const showPaymentCard =
+    proposalSlug === "carlos-alvarado-salud-domicilio" ||
+    proposalSlug === "importadora-altamira-control-inventario";
+  const showIncludesCard = proposalSlug === "importadora-altamira-control-inventario";
 
   return (
     <section className="bg-[#140731] border-b border-[#2E1266] py-20 px-6">
@@ -135,6 +138,19 @@ export function PricingCards({ plans, proposalSlug }: PricingCardsProps) {
               >
                 {renderDescription(descriptionText)}
               </div>
+
+              {showIncludesCard && plan.items?.length ? (
+                <div className="mb-6 rounded-xl border border-[#5B2FA0]/60 bg-[#1D0B47] p-4">
+                  <p className="text-[11px] font-semibold tracking-widest uppercase text-[#C9ADFF]/70 mb-2">
+                    Qué incluye esta opción
+                  </p>
+                  <ul className="space-y-1.5 list-disc list-inside text-sm leading-relaxed text-[#E8DBFF]">
+                    {plan.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>{renderBoldText(item).join("")}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
 
               {showPaymentCard && paymentStructure && (
                 <div className="mt-auto rounded-xl border border-[#5B2FA0]/60 bg-[#1D0B47] p-4">
