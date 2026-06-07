@@ -108,7 +108,7 @@ const candimaniaDigital: ProposalConfig = {
       name: "Opción 0 — Discovery y Arquitectura",
       price: "CLP 690.000 + IVA (este pago es acreditado a las siguientes fases)",
       description:
-        "Paso inicial sugerido: Estudio del modelo de juego, levantamiento de requerimientos técnicos, validación de factibilidad (pagos masivos tipo Fintoc) y marco legal. Incluye reunión presencial.\n\n**Plazo:** 2 semanas.\n\n**Pago:** 50% inicio · 50% entrega.",
+        "Paso inicial sugerido: Estudio del modelo de juego, levantamiento de requerimientos técnicos, validación de factibilidad (pagos masivos tipo Fintoc) y marco legal. Incluye reunión presencial.\n\n**Plazo:** 2 semanas.\n\n**Pago:** 100% inicio",
       items: [
         "Reunión de inmersión y juego físico",
         "Diagramas de flujo y arquitectura de la plataforma",
