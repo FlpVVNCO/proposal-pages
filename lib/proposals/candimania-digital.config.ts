@@ -8,7 +8,7 @@ const candimaniaDigital: ProposalConfig = {
     "digitalizar un juego de mesa con marca registrada, permitir que cientos o miles de usuarios jueguen rondas de 30 segundos con monedas reales, paguen y cobren premios de forma automatizada, y escalar por niveles sin exponerse legalmente como casino en Chile.",
   summary: {
     problem:
-      "Víctor tiene Candimanía funcionando en formato físico con tres niveles progresivos, pero no puede escalar ni monetizar masivamente sin software, billetera digital, pasarela de pagos y motor de juego en tiempo real.",
+      "Víctor tiene Candymanía funcionando en formato físico con tres niveles progresivos, pero no puede escalar ni monetizar masivamente sin software, billetera digital, pasarela de pagos y motor de juego en tiempo real.",
     solution:
       "Desarrollar una plataforma por fases: Fase Inicial (Discovery) para mitigación legal y técnica, luego MVP (Nivel 1) para validación rápida, y versiones más avanzadas (Niveles 2 y 3) escalando de acuerdo a la tracción.",
     expectedResult:
@@ -26,7 +26,7 @@ const candimaniaDigital: ProposalConfig = {
   ],
   modules: [
     {
-      title: "Motor de juego Candimanía",
+      title: "Motor de juego Candymanía",
       description:
         "Recreación digital de tableros por nivel, dados (imágenes y números), temporizador de 30 segundos, selección de figuras y cálculo automático de multiplicadores.",
       impact:
@@ -70,7 +70,7 @@ const candimaniaDigital: ProposalConfig = {
     {
       title: "Experiencia de marca",
       description:
-        "Interfaz Candimanía, música integrada, assets del tablero y progresión por niveles (1 → 2 → 3).",
+        "Interfaz Candymanía, música integrada, assets del tablero y progresión por niveles (1 → 2 → 3).",
       impact:
         "Consolida identidad de marca registrada en el producto digital.",
     },
@@ -158,7 +158,7 @@ const candimaniaDigital: ProposalConfig = {
       description:
         "Nivel 1 digital, billetera, rondas 30s y pagos piloto para validar tracción antes de invertir en niveles avanzados.\n\n**Plazo:** 6–8 semanas.\n\n**Mantención opcional:** CLP 250.000 / mes.\n\n**Pago:** 50% inicio · 50% entrega.",
       items: [
-        "Nivel 1 del tablero Candimanía",
+        "Nivel 1 del tablero Candymanía",
         "Motor de rondas con temporizador 30 segundos",
         "Registro / login (Google + email)",
         "Billetera interna con monedas del juego",
@@ -186,7 +186,7 @@ const candimaniaDigital: ProposalConfig = {
     },
     {
       name: "Opción 3 — Proyecto Completo",
-      price: "CLP 23.990.000",
+      price: "CLP 24.990.000",
       description:
         "Ecosistema completo: Nivel 3 (18 figuras), fintech automatizada, 1.000+ usuarios, chat opcional y publicación en stores.\n\n**Plazo:** 18–22 semanas desde inicio.\n\n**Mantención opcional:** CLP 800.000 / mes.\n\n**Pago:** 40% inicio · 40% hito · 20% entrega.",
       items: [
