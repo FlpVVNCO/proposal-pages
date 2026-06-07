@@ -4,6 +4,7 @@ import isoDrive from "./iso-drive.config";
 import agronomerAsesorSaas from "./agronomer-asesor-saas.config";
 import carlosAlvaradoSaludDomicilio from "./carlos-alvarado-salud-domicilio.config";
 import importadoraAltamiraControlInventario from "./importadora-altamira-control-inventario.config";
+import candimaniaDigital from "./candimania-digital.config";
 
 /**
  * Registry of all available proposals.
@@ -17,6 +18,7 @@ const proposals: ProposalConfig[] = [
   agronomerAsesorSaas,
   carlosAlvaradoSaludDomicilio,
   importadoraAltamiraControlInventario,
+  candimaniaDigital,
 ];
 
 export function getProposalBySlug(slug: string): ProposalConfig | undefined {

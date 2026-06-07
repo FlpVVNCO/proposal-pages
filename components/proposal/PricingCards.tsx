@@ -52,7 +52,7 @@ export function PricingCards({ plans, proposalSlug }: PricingCardsProps) {
   const showPaymentCard =
     proposalSlug === "carlos-alvarado-salud-domicilio" ||
     proposalSlug === "importadora-altamira-control-inventario";
-  const showIncludesCard = proposalSlug === "importadora-altamira-control-inventario";
+  const showIncludesCard = proposalSlug === "importadora-altamira-control-inventario" || proposalSlug === "candimania-digital";
 
   return (
     <section className="bg-[#140731] border-b border-[#2E1266] py-20 px-6">
